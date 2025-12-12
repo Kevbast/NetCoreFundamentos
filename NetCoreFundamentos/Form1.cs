@@ -18,6 +18,10 @@ namespace NetCoreFundamentos
             this.lblSaludo.Width = 200;
             this.lblSaludo.Height = 500;
             this.lblSaludo.BackColor = Color.Red;
+            //NO ES UNA CONVERSION AUTOMATICA
+            short pequeño = 88;
+            int mayor = pequeño;
+
         }
 
     }
