@@ -28,12 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            btnSaludo = new Button();
+            lblSaludo = new Label();
+            label2 = new Label();
+            txtNombre = new TextBox();
+            SuspendLayout();
+            // 
+            // btnSaludo
+            // 
+            btnSaludo.Location = new Point(433, 208);
+            btnSaludo.Name = "btnSaludo";
+            btnSaludo.Size = new Size(140, 45);
+            btnSaludo.TabIndex = 0;
+            btnSaludo.Text = "HI";
+            btnSaludo.UseVisualStyleBackColor = true;
+            btnSaludo.Click += btnSaludo_Click;
+            // 
+            // lblSaludo
+            // 
+            lblSaludo.AutoSize = true;
+            lblSaludo.Location = new Point(433, 118);
+            lblSaludo.Name = "lblSaludo";
+            lblSaludo.Size = new Size(140, 15);
+            lblSaludo.TabIndex = 1;
+            lblSaludo.Text = "INTRODUCE TU NOMBRE";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(290, 139);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 15);
+            label2.TabIndex = 1;
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(433, 165);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(140, 23);
+            txtNombre.TabIndex = 2;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(890, 521);
+            Controls.Add(txtNombre);
+            Controls.Add(label2);
+            Controls.Add(lblSaludo);
+            Controls.Add(btnSaludo);
+            Name = "Form1";
             Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btnSaludo;
+        private Label lblSaludo;
+        private Label label2;
+        private TextBox txtNombre;
     }
 }

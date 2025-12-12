@@ -6,5 +6,19 @@ namespace NetCoreFundamentos
         {
             InitializeComponent();
         }
+        
+
+        private void btnSaludo_Click(object sender, EventArgs e)
+        {
+            string texto = this.txtNombre.Text;
+            //SOLO ESCRIBIMOS AQUÍ
+            MessageBox.Show("Hola " + texto);
+            this.lblSaludo.Text = "HOLA " + texto;
+            this.txtNombre.Location = new Point(10,30);
+            this.lblSaludo.Width = 200;
+            this.lblSaludo.Height = 500;
+            this.lblSaludo.BackColor = Color.Red;
+        }
+
     }
 }
