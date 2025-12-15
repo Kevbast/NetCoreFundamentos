@@ -38,11 +38,13 @@
             txtAzul = new TextBox();
             txtRojo = new TextBox();
             txtcolor = new TextBox();
+            label4 = new Label();
+            label5 = new Label();
             SuspendLayout();
             // 
             // btnFunciones
             // 
-            btnFunciones.Location = new Point(320, 233);
+            btnFunciones.Location = new Point(320, 236);
             btnFunciones.Name = "btnFunciones";
             btnFunciones.Size = new Size(146, 62);
             btnFunciones.TabIndex = 0;
@@ -87,9 +89,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(512, 114);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(36, 15);
             label3.TabIndex = 5;
-            label3.Text = "label3";
+            label3.Text = "verde";
             // 
             // txtVerde
             // 
@@ -119,11 +121,31 @@
             txtcolor.Size = new Size(123, 23);
             txtcolor.TabIndex = 9;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(512, 166);
+            label4.Name = "label4";
+            label4.Size = new Size(28, 15);
+            label4.TabIndex = 10;
+            label4.Text = "azul";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(512, 209);
+            label5.Name = "label5";
+            label5.Size = new Size(28, 15);
+            label5.TabIndex = 11;
+            label5.Text = "rojo";
+            // 
             // Form02ColoresPosicion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(txtcolor);
             Controls.Add(txtRojo);
             Controls.Add(txtAzul);
@@ -152,5 +174,7 @@
         private TextBox txtAzul;
         private TextBox txtRojo;
         private TextBox txtcolor;
+        private Label label4;
+        private Label label5;
     }
 }
