@@ -6,12 +6,14 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace NetCoreFundamentos
 {
     public partial class Form07SumarString : Form
     {
         public Form07SumarString()
         {
+            
             InitializeComponent();
         }
 
