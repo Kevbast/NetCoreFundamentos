@@ -26,7 +26,7 @@ namespace NetCoreFundamentos
             {   //SEÑALAR
                 MessageBox.Show("Este producto ya está en la lista");
                 int index = this.lstProductos.Items.IndexOf(producto);
-                this.lstProductos.SelectedIndex= index;
+                this.lstProductos.SelectedIndex = index;
             }
             else
             {
@@ -55,7 +55,7 @@ namespace NetCoreFundamentos
         private void btnSeleccion_Click(object sender, EventArgs e)
         {
             //VAMOS A RECORRER LA COLECCION DE ITEMS SELECCIONADOS
-           
+
             int numElementos = this.lstProductos.SelectedIndices.Count - 1;
             for (int i = numElementos; i >= 0; i--)
             {
@@ -64,7 +64,6 @@ namespace NetCoreFundamentos
                 this.lstAlmacen.Items.Add(texto);
                 this.lstProductos.Items.RemoveAt(index);
             }
-
 
         }
 
@@ -75,16 +74,49 @@ namespace NetCoreFundamentos
                 this.lstAlmacen.Items.Add(elemento);
             }
             this.lstProductos.Items.Clear();
+
+            //otra forma de hacerlo
+            //this.lstAlmacen.Items.AddRange(this.lstProductos.Items);
+            //this.lstProductos.Items.Clear();
         }
 
         private void btnSubir_Click(object sender, EventArgs e)
         {
-
+            int index = this.lstAlmacen.SelectedIndex;
+            string producto = this.lstAlmacen.SelectedItem.ToString();
+            this.lstAlmacen.Items.RemoveAt(index);
+            this.lstAlmacen.Items.Insert(index - 1, producto);
+            this.lstAlmacen.SelectedIndex = index - 1;
         }
 
         private void btnBajar_Click(object sender, EventArgs e)
         {
+            int index = this.lstAlmacen.SelectedIndex;
+            string producto = this.lstAlmacen.SelectedItem.ToString();
+            this.lstAlmacen.Items.RemoveAt(index);
+            this.lstAlmacen.Items.Insert(index + 1, producto);
+            this.lstAlmacen.SelectedIndex = index + 1;
+        }
 
+        private void lstAlmacen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = this.lstAlmacen.SelectedIndex;
+            if (index == 0)
+            {
+                this.btnSubir.Enabled = false;
+            }
+            else
+            {
+                this.btnSubir.Enabled = true;
+            }
+            if (index == this.lstAlmacen.Items.Count - 1)
+            {
+                this.btnBajar.Enabled = false;
+            }
+            else
+            {
+                this.btnBajar.Enabled = true;
+            }
         }
     }
 }

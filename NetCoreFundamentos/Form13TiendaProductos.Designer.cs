@@ -85,6 +85,7 @@
             lstAlmacen.Name = "lstAlmacen";
             lstAlmacen.Size = new Size(161, 229);
             lstAlmacen.TabIndex = 4;
+            lstAlmacen.SelectedIndexChanged += lstAlmacen_SelectedIndexChanged;
             // 
             // txtProducto
             // 
